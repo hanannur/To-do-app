@@ -1,0 +1,118 @@
+body{
+    display:flex;
+    justify-content:center;
+    padding:20px;
+    background-image: url("/images/backimg.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    margin:0;
+    font-family: 'Segoe UI', Tahoma, sans-serif;
+    
+
+}
+
+.container{
+    height:auto;
+    max-width:900px;
+    padding:30px;
+    margin:40px;
+}
+ .ToDo-List{
+    color: rgb(19, 17, 8);
+    font-weight: bold;
+    align-items:center;
+    font-size: 40px;
+ }   
+.addinginput{
+    display:flex;
+    align-items:center;
+    justify-content: center;
+    border-radius: 30px;
+    border: 0.5px solid black;
+    padding-left:20px;
+
+}
+
+input{
+    flex:1;
+    border:none;
+    outline:none;
+    background:transparent;
+    padding:10px;
+    font-weight: 16px;
+}
+
+button{
+   border:none;
+   outline:none;
+   padding:10px 10px; 
+   border-radius:40px;
+   font-size:16px;
+   cursor:pointer;
+   background-color: rgb(231, 189, 217);
+   
+}
+ul li{
+    list-style:none;
+    position:relative;
+    padding:30px;
+    font-size:18px;
+    cursor: pointer;
+    user-select:none;
+
+}
+
+ 
+ul li::before{
+    content:'';
+    position:absolute;
+    left:0;
+    top:50%;
+    width:20px;
+    height:20px;
+    border-radius:50%;
+    border:0.05px solid black;
+    transform: translateY(-50%);
+    background-image: url("images/unchecked.png");
+    background-size:cover ;
+    background-position: center;
+    
+
+
+}
+ul li.checked {
+  text-decoration: line-through;
+  color: gray;
+}
+ul li.checked::before{
+    background-image: url("images/checked.png");
+    background-size:cover ;
+    background-position: center;
+    background-color: rgb(231, 189, 217);
+    
+}
+
+
+
+ul li span{
+    position:absolute;
+    right:0;
+    top:50%;
+    transform: translateY(-50%);
+    font-size: 18px;
+    /* margin-left:2rem; */
+    line-height: 12px;
+    text-align: center;
+    border-radius:50%;
+
+}
+
+ul li span:hover{
+    cursor:pointer;
+    
+    line-height: 12px;
+     border-radius:50%;
+}
+ 
